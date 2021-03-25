@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/91d00dc5-c863-4541-8cfa-8429d39b0926/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/fhirlinuxtest",
+    "appService.deploySubpath": "."
+}
