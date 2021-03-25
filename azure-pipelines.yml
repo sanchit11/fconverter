@@ -15,16 +15,28 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 - task: Npm@1
+  displayName: 'Install npm dependencies'
   inputs:
-    command: 'install'
-    workingDir: 'nodefiles2/FHIR-Converter-master'
-- task: ArchiveFiles@2
+    workingDir: '$(System.DefaultWorkingDirectory)'
+    verbose: false
+
+- task: Npm@1
+  displayName: 'npm run build'
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+    command: custom
+    workingDir: '$(System.DefaultWorkingDirectory)'
+    verbose: false
+    customCommand: 'run build --if-present'
+
+
+    
+- powershell: |
+   # Write your PowerShell commands here.
+   
+   Write-Host "Hello World"
+   zip -r $(Build.ArtifactStagingDirectory)/fhirconverter.zip ./ -x *.git* */node_modules/**\*
+     
+  displayName: 'PowerShell Script'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
