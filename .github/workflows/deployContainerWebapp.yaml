@@ -16,9 +16,9 @@ jobs:
       id: create-acr
       run: |
         az acr create -n fhirconverterregistrytest2 -g appsvc_linux_centralus --location "Central US" --sku Standard --admin-enabled
-        echo "::set-output name=acr_username::`az acr credential show -n myregistryfhirconverter --query username | xargs`"
-        echo "::set-output name=acr_password::`az acr credential show -n myregistryfhirconverter --query passwords[0].value | xargs`"
-        echo "::add-mask::`az acr credential show -n myregistryfhirconverter --query passwords[0].value | xargs`"
+        echo "::set-output name=acr_username::`az acr credential show -n fhirconverterregistrytest2 --query username | xargs`"
+        echo "::set-output name=acr_password::`az acr credential show -n fhirconverterregistrytest2 --query passwords[0].value | xargs`"
+        echo "::add-mask::`az acr credential show -n fhirconverterregistrytest2 --query passwords[0].value | xargs`"
     
     - uses: azure/docker-login@v1
       with:
