@@ -111,7 +111,7 @@
     "promise": "^8.0.3",
     "pushover-giting": "0.0.3",
     "swagger-jsdoc": "^3.2.9",
-    "swagger-ui-express": "^4.0.2",
+    "swagger-ui-express": "^4.2.0",
     "underscore": "^1.9.1",
     "uuid": "^3.3.2",
     "xml-parse-from-string": "^1.0.1",
