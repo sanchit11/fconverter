@@ -98,7 +98,7 @@
     "codemirror": "^5.46.0",
     "cookie-parser": "^1.4.4",
     "deepmerge": "^4.2.2",
-    "express": "^4.16.4",
+    "express": "^4.19.2",
     "fast-xml-parser": "^3.19.0",
     "fhir": "^4.7.9",
     "fs-extra": "^8.1.0",
