@@ -110,7 +110,7 @@
     "nodegit": "^0.24.3",
     "promise": "^8.0.3",
     "pushover-giting": "0.0.3",
-    "swagger-jsdoc": "^3.2.9",
+    "swagger-jsdoc": "^6.0.0",
     "swagger-ui-express": "^4.0.2",
     "underscore": "^1.9.1",
     "uuid": "^3.3.2",
